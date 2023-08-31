@@ -16,6 +16,6 @@
     </environments>
     <!-- mappers配置 可配置多个  -->
     <mappers>
-        <mapper resource="wjx/mapper/UserMapper.xml"/>
+        <mapper resource="com/wjx/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

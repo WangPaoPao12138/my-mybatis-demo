@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--<configuration>-->
+<!--&lt;!&ndash;    <environments default="dev">&ndash;&gt;-->
+<!--&lt;!&ndash;        <environment id="dev">&ndash;&gt;-->
+<!--&lt;!&ndash;            <transactionManager type="JDBC"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <dataSource type="POOLED">&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="driver" value="com.mysql.jdbc.Driver"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="url" value="jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=UTC&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="username" value="root"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <property name="pasword" value="123456"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </dataSource>&ndash;&gt;-->
+<!--&lt;!&ndash;        </environment>&ndash;&gt;-->
+<!--&lt;!&ndash;    </environments>&ndash;&gt;-->
+<!--    &lt;!&ndash; mappers配置 可配置多个  &ndash;&gt;-->
+<!--    &lt;!&ndash;settings:控制mybatis全局行为&ndash;&gt;-->
+<!--    <settings>-->
+<!--        &lt;!&ndash;设置mybatis输出日志&ndash;&gt;-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+
+<!--    &lt;!&ndash;类别名&ndash;&gt;-->
+<!--    <typeAliases>-->
+<!--        <package name="com.wjx.entity"/>-->
+<!--    </typeAliases>-->
+<!--    <mappers>-->
+<!--        &lt;!&ndash;一个mapper标签指定一个文件的位置。-->
+<!--            从类路径开始的路径信息。  target/clasess-->
+<!--            指定sql映射文件的位置，使用包的方式，一次性全部把包中的映射文件全部读取到-->
+<!--            &ndash;&gt;-->
+<!--        <package name="com.wjx.dao"/>-->
+<!--    </mappers>-->
+<!--</configuration>-->
+
+<configuration>
+
+    <!--settings：控制mybatis全局行为-->
+    <settings>
+        <!--设置mybatis输出日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--设置别名-->
+    <typeAliases>
+        <!--name:实体类所在的包名 表示com.wjx.entity 包中的列名就是别名 你可以使用Student表示com.wjx.entity.Student
+        -->
+        <package name="com.wjx.entity"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.wjx.plugin.MyMybatisPlugin"/>
+    </plugins>
+    <!-- sql mapper(sql映射文件)的位置-->
+    <mappers>
+        <!-- 通过 resource 方法一次加载一个映射文件 -->
+<!--         <mapper resource="com/wjx/dao/StudentDao.xml"/>-->
+        <!--name：是包名， 这个包中的所有mapper.xml一次都能加载        -->
+        <package name="com.wjx.dao"/>
+<!--        <package name="com.wjx.plugin"/>-->
+    </mappers>
+</configuration>
