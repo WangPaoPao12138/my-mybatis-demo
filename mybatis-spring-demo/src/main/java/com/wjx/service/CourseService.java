@@ -13,4 +13,13 @@ public interface CourseService {
     List<Course> queryCourse();
 
     int addCourse(Course course);
+
+    //单insert循环插入
+    int addCourseByForeach(List<Course> courseList);
+
+    //批量插入 batchInsert
+    int addCourseByBatch(List<Course> courseList);
+
+    //批处理sql
+    int insertBatchBySessionCommit(List<Course> courseList);
 }
