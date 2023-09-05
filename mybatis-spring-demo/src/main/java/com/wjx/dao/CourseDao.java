@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface CourseDao {
     List<Course> selectCourse();
+   int insertCourse(Course course);
+   int updateCourse(Course course);
 }

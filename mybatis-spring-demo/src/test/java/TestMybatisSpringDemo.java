@@ -27,7 +27,7 @@ public class TestMybatisSpringDemo {
 //    }
 
     @Test
-    public void test04(){
+    public void testForSelect(){
         //读取spring主配置文件
         String in = "ApplicationContext.xml";
         ApplicationContext ac = new ClassPathXmlApplicationContext(in);
@@ -41,5 +41,24 @@ public class TestMybatisSpringDemo {
         for (Course course:courseList) {
             System.out.println("<<<<"+course);
         }
+    }
+    @Test
+    public void testForInsert(){
+        //读取spring主配置文件
+        String in = "ApplicationContext.xml";
+        ApplicationContext ac = new ClassPathXmlApplicationContext(in);
+        StudentService studentService = (StudentService) ac.getBean("studentService");
+        Student student = new Student();
+        student.setName("王图图");
+        student.setAge(3);
+        student.setAddress("翻斗大街");
+        student.setTestTuoFeng("不开启");
+        studentService.addStudent(student);
+
+        CourseService courseService = (CourseService) ac.getBean("courseService");
+        Course course = new Course();
+        course.setCourseName("MybatisPlus");
+        course.setTestTuoFeng("开启");
+        courseService.addCourse(course);
     }
 }

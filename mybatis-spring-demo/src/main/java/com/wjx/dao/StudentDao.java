@@ -1,5 +1,6 @@
 package com.wjx.dao;
 
+import com.wjx.entity.Course;
 import com.wjx.entity.Student;
 
 import java.util.List;
@@ -11,4 +12,5 @@ import java.util.List;
  */
 public interface StudentDao {
     List<Student> selectStudent();
+    int insertStudent(Student student);
 }

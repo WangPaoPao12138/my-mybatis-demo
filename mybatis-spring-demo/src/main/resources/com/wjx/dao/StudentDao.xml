@@ -7,4 +7,9 @@
         SELECT *
         FROM student;
     </select>
+    <insert id="insertStudent">
+        INSERT INTO student (name, address, age, testTuoFeng)
+        VALUES (#{name}, #{address},#{age},#{testTuoFeng})
+    </insert>
+
 </mapper>

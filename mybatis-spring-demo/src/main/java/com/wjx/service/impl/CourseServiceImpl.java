@@ -22,4 +22,9 @@ public class CourseServiceImpl implements CourseService {
     public List<Course> queryCourse() {
         return courseDao.selectCourse();
     }
+
+    @Override
+    public int addCourse(Course course) {
+        return courseDao.insertCourse(course);
+    }
 }

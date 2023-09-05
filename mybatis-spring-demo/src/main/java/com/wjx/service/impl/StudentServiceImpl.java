@@ -22,7 +22,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int addStudent(Student student) {
-        return 0;
+        return studentDao.insertStudent(student);
     }
 
     @Override
