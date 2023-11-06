@@ -19,4 +19,5 @@ public class Student {
     private Integer age;
     //测试驼峰插件 不开启驼峰
     private String testTuoFeng;
+    private String testTuoFeng2;
 }

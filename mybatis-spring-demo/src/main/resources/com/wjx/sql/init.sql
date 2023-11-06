@@ -18,3 +18,6 @@ CREATE TABLE course
     `test_tuo_feng` varchar(40) DEFAULT NULL COMMENT '测试驼峰',
     PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='课程表'
+
+ALTER TABLE `mybatis_plus`.`student`
+    ADD COLUMN `test_tuo_feng2` varchar(40) NULL COMMENT '测试驼峰' AFTER `testTuoFeng`;

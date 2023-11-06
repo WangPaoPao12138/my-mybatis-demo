@@ -35,7 +35,9 @@
 <!--</configuration>-->
 
 <configuration>
-
+<!--    <settings>-->
+<!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+<!--    </settings>-->
     <!--settings：控制mybatis全局行为-->
 <!--    <settings>-->
 <!--        &lt;!&ndash;指定 MyBatis 增加到日志名称的前缀。&ndash;&gt;-->

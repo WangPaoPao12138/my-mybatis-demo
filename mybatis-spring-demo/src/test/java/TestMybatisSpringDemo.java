@@ -37,11 +37,11 @@ public class TestMybatisSpringDemo {
         for (Student stu : studentList) {
             System.out.println(">>>>" + stu);
         }
-        CourseService courseService = (CourseService) ac.getBean("courseService");
-        List<Course> courseList = courseService.queryCourse();
-        for (Course course : courseList) {
-            System.out.println("<<<<" + course);
-        }
+//        CourseService courseService = (CourseService) ac.getBean("courseService");
+//        List<Course> courseList = courseService.queryCourse();
+//        for (Course course : courseList) {
+//            System.out.println("<<<<" + course);
+//        }
     }
 
     @Test
